@@ -1,13 +1,36 @@
-export default function App() {
-  return (
-    <div className="bg-white shadow-xl rounded-xl m-8 py-4 px-2">
-      <h1 className="text-xl font-bold text-gray-700 ml-4">
-        Hello world!
-      </h1>
-      <p className="text-gray-500 ml-4 mt-2">
-        Auto Reload
-      </p>
-    </div>
+import {
+  Hero, Popular, Super, Service, SpecialOffer, CustomerReviews, Subscribe, Footer
+} from "./sections";
+import Nav from "./components/Nav";
 
-  )
-}
+const App = () => (
+  <main className="relative">
+    <Nav/>
+    <section className="xl:padding-1 wide:padding-r padding-b">
+      <Hero/>
+    </section>
+    <section className="padding">
+      <Popular/>
+    </section>
+    <section className="padding">
+      <Super/>
+    </section>
+    <section className="padding-x py-10">
+      <Service/>
+    </section>
+    <section className="padding">
+      <SpecialOffer/>
+    </section>
+    <section className="padding bg-blue-50 ">
+      <CustomerReviews/>
+    </section>
+    <section className="padding-x sm:py-32 py-16 w-full">
+      <Subscribe/>
+    </section>
+    <section className="bg-black padding-x padding-t pb-8 text-white">
+      <Footer/>
+    </section>
+  </main>
+);
+
+export default App;
